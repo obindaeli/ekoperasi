@@ -36,12 +36,9 @@
   <script src="<?=base_url()?>/assets/js/page/modules-datatables.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
-  <script type="text/javascript">
+    <script>
         $(document).ready(function(){
-
-            // Format mata uang.
-            $( '.uang' ).mask('000.000.000', {reverse: true});
-
+            $('.nilai').mask('000.000.000', {reverse: true});
         })
     </script>
 
