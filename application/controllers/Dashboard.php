@@ -233,4 +233,44 @@ class Dashboard extends CI_Controller {
 		redirect('Dashboard/sumber');
 	}
 
+
+	public function kas(){
+		$data = [
+			'tampil'=>$this->M_data->viewkas()
+		];
+		
+
+		$this->load->view('partials/header.php');
+		$this->load->view('partials/navbar.php');
+		$this->load->view('partials/sidebar.php');
+		$this->load->view('dashboard/kas.php',$data);
+		$this->load->view('partials/footer.php');
+	}
+
+	public function tambahkas(){
+		$this->form_validation->set_rules('b','Pagu','required|trim');
+		$this->form_validation->set_rules('c','RKUD','required|trim');
+
+		if($this->form_validation->run()==false){
+			$data=[
+				'sumber'=>$this->M_data->tampil_data('sumber')->result()
+			];
+			$this->load->view('partials/header.php');
+			$this->load->view('partials/navbar.php');
+			$this->load->view('partials/sidebar.php');
+			$this->load->view('dashboard/addkas.php',$data);
+			$this->load->view('partials/footer.php');
+		}else {
+			$data=[
+				'id_sumber'=> htmlspecialchars($this->input->post('a')),
+				'pagu'=> htmlspecialchars($this->input->post('b')),
+				'rkud'=> htmlspecialchars($this->input->post('a'))
+			];
+
+			$this->M_data->input_data('kas',$data);
+			$this->session->set_flashdata('flash', 'success-DATA BERHASIL DITAMBAHKAN');
+			redirect('Dashboard/kas');
+		}
+	}
+
 }

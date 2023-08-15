@@ -77,6 +77,12 @@ class M_data extends CI_Model{
                                     LEFT JOIN sumber ON sumber.id_sumber=penyerapan.id_sumber");
             return $query->result();
         }
+
+        public function viewkas(){
+            $query=$this->db->query("SELECT kas.id_kas, sumber.nama_sumber, kas.pagu, kas.rkud FROM `kas` 
+                                     LEFT JOIN sumber ON sumber.id_sumber=kas.id_sumber");
+            return $query->result();
+        }
     }
 
 ?>
