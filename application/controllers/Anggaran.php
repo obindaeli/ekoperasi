@@ -74,5 +74,25 @@ class Anggaran extends CI_Controller {
 		$this->load->view('partials/footer.php');
 	}
 
+	public function addpengajuan(){
+		$this->form_validation->set_rules('c','c','required|trim');
+		if ($this->form_validation->run()==false) {
+			$data=[
+				'sumber' => $this->M_data->tampil_data('sumber')->result(),
+				'opd' => $this->M_data->tampil_data('opd')->result()
+			];
+			$this->load->view('partials/header.php');
+			$this->load->view('partials/navbar.php');
+			$this->load->view('partials/sidebar.php');
+			$this->load->view('pengajuan/add.php',$data);
+			$this->load->view('partials/footer.php');
+		}else {
+			# code...
+		}
+		
+	}
+
+	
+
 
 }
