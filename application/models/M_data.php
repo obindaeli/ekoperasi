@@ -21,6 +21,7 @@ class M_data extends CI_Model{
         public function edit_data($where,$table){
             return $this->db->get_where($table,$where);
         }
+        
 
         public function update_data($where,$data,$table){
             $this->db->where($where);
@@ -79,10 +80,19 @@ class M_data extends CI_Model{
         }
 
         public function viewkas(){
-            $query=$this->db->query("SELECT kas.id_kas, sumber.nama_sumber, kas.pagu, kas.rkud FROM `kas` 
-                                     LEFT JOIN sumber ON sumber.id_sumber=kas.id_sumber");
+            $query=$this->db->query("SELECT kas.id_kas, sumber.nama_sumber, kas.pagu, kas.rkud, kas.pagu-kas.rkud AS sisa, 
+                                    SUM(penyerapan.nilai) as realisasi 
+                                    FROM `kas` 
+                                    LEFT JOIN sumber ON sumber.id_sumber=kas.id_sumber 
+                                    LEFT JOIN penyerapan ON penyerapan.id_sumber=sumber.id_sumber 
+                                    GROUP BY sumber.id_sumber");
             return $query->result();
         }
+
+        public function cekdata($where,$table){
+            return $this->db->get_where($table,$where);
+        }
+
     }
 
 ?>

@@ -4,8 +4,8 @@
           <div class="section-header">
             <h1>Pengajuan</h1>
             <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="<?=base_url('dashboard')?>">Dashboard</a></div>
-              <div class="breadcrumb-item">Anggaran</div>
+              <div class="breadcrumb-item active"><a href="<?=base_url('Anggaran/Pengajuan')?>">Dashboard</a></div>
+              <div class="breadcrumb-item">Pengajuan</div>
             </div>
           </div>
 				<div class="row">
@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-header">
                         <span>
-                            <a href="<?=base_url('anggaran/pengajuan')?>" class="btn btn-success">Tambah</a>
+                            <a href="<?=base_url('anggaran/addpengajuan')?>" class="btn btn-success">Tambah</a>
                         </span>
                     </div>
                     <div class="card-body">

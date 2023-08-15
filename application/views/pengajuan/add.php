@@ -2,17 +2,17 @@
 <div class="main-content">
         <section class="section">
           <div class="section-header">
-            <h1>Anggaran</h1>
+            <h1>Pengajuan</h1>
             <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="<?=base_url('Anggaran')?>">Anggaran</a></div>
-              <div class="breadcrumb-item">Tambah Anggaran</div>
+              <div class="breadcrumb-item active"><a href="<?=base_url('Anggaran/Pengajuan')?>">Pengajuan</a></div>
+              <div class="breadcrumb-item">Tambah Pengajuan</div>
             </div>
           </div>
 				<div class="row">
 					<div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Tambah Anggaran</h4>
+                        <h4>Tambah Pengajuan</h4>
                        
                     </div>
                     <div class="card-body">

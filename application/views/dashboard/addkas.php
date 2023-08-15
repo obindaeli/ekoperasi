@@ -16,10 +16,10 @@
                        
                     </div>
                     <div class="card-body">
-                        <form action="<?= base_url('dashboard/tambahkas'); ?>" method="POST">
+                        <form action="<?= base_url('dashboard/addkas'); ?>" method="POST">
                         <div class="form-group col-8">
                                 <label>Nama Sumber Dana</label>
-                                <select name="b" id="" class="form-control" required>
+                                <select name="a" id="" class="form-control" required>
                                   <option value="" disabled selected hidden>[PILIH SUMBER ANGGARAN]</option>
                                   <?php 
                                     foreach ($sumber as $row ): 
@@ -32,11 +32,11 @@
 
                             <div class="form-group col-8">
                                 <label>Nilai Pagu</label>
-                                <input type="text" class="form-control nilai" name="password">
+                                <input type="number" class="form-control nilai" name="b" autocomplete="off">
                             </div>
                             <div class="form-group col-8">
                                 <label>RKUD</label>
-                                <input type="text" class="form-control nilai" name="username" autocomplete="off">
+                                <input type="number" class="form-control nilai" name="c" autocomplete="off">
                             </div>
                             
                             <div class="form-group col-4">

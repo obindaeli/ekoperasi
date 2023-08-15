@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-header">
                         <span>
-                            <a href="<?=base_url('Dashboard/tambahkas')?>" class="btn btn-success">Tambah</a>
+                            <a href="<?=base_url('Dashboard/addkas')?>" class="btn btn-success">Tambah</a>
                         </span>
                     </div>
                     <div class="card-body">
@@ -26,6 +26,8 @@
                                     <th>Sumber Dana</th>
                                     <th>Pagu</th>
                                     <th>RKUD</th>
+                                    <th>Sisa</th>
+                                    <th>Realisasi</th>
                                     <th>Aksi</th>
                                 </tr>
                                 </thead>
@@ -40,8 +42,10 @@
                                               <td>$row->nama_sumber</td>
                                               <td>".rupiah($row->pagu)."</td>
                                               <td>".rupiah($row->rkud)."</td>
+                                              <td>".rupiah($row->sisa)."</td>
+                                              <td>".rupiah($row->realisasi)."</td>
                                               <td class='text-center'>
-                                                    <a href='".base_url('dashboard/editkas/')."$row->id_pengajuan' class='badge badge-success'>
+                                                    <a href='".base_url('dashboard/editkas/')."$row->id_kas' class='badge badge-success'>
                                                     <i class='fas fa-edit'></i>
                                               </a>
                                               </td>
