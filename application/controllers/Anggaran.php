@@ -64,7 +64,14 @@ class Anggaran extends CI_Controller {
 	}
 
 	public function pengajuan(){
-		
+		$data=[
+			'tampil' => $this->M_data->viewpengajuan()
+		];
+		$this->load->view('partials/header.php');
+		$this->load->view('partials/navbar.php');
+		$this->load->view('partials/sidebar.php');
+		$this->load->view('pengajuan/main.php',$data);
+		$this->load->view('partials/footer.php');
 	}
 
 

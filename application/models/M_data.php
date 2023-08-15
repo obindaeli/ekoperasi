@@ -68,6 +68,15 @@ class M_data extends CI_Model{
                                         GROUP BY pagu.id_sumber");
             return $query->result();
         }
+
+        public function viewpengajuan(){
+            $query=$this->db->query("SELECT penyerapan.id_penyerapan AS id_pengajuan, nilai as nilaipengajuan, 
+                                    opd.nama_opd, sumber.nama_sumber, penyerapan.status 
+                                    FROM `penyerapan` 
+                                    LEFT JOIN opd ON opd.id_opd=penyerapan.id_opd 
+                                    LEFT JOIN sumber ON sumber.id_sumber=penyerapan.id_sumber");
+            return $query->result();
+        }
     }
 
 ?>

@@ -39,10 +39,11 @@
                                           <tr>
                                               <td>$no</td>
                                               <td>$row->nama_opd</td>
-                                              <td>".rupiah($row->pad)."</td>
-                                              <td>$row->pengajuan</td>
+                                              <td>$row->nama_sumber</td>
+                                              <td>".rupiah($row->nilaipengajuan)."</td>
+                                              <td>$row->status</td>
                                               <td class='text-center'>
-                                                    <a href='".base_url('anggaran/editpengajuan/')."$row->id_opd' class='badge badge-success'>
+                                                    <a href='".base_url('anggaran/editpengajuan/')."$row->id_pengajuan' class='badge badge-success'>
                                                     <i class='fas fa-eye'></i>
                                               </a>
                                               </td>
