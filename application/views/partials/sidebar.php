@@ -20,6 +20,7 @@
                 <li><a class="nav-link" href="<?=base_url('dashboard/user')?>">Pengguna</a></li>
                 <li><a class="nav-link" href="<?=base_url('dashboard/opd')?>">Perangkat Daerah</a></li>
                 <li><a class="nav-link" href="<?=base_url('dashboard/sumber')?>">Sumber Anggaran</a></li>
+                <li><a class="nav-link" href="<?=base_url('dashboard/kas')?>">Kas Daerah</a></li>
                 <li><a class="nav-link" href="<?=base_url('anggaran')?>">Anggaran</a></li>
               </ul>
             </li>
