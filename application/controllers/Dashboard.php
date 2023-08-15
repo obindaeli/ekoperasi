@@ -247,7 +247,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('partials/footer.php');
 	}
 
-	public function tambahkas(){
+	public function addkas(){
 		$this->form_validation->set_rules('b','Pagu','required|trim');
 		$this->form_validation->set_rules('c','RKUD','required|trim');
 
@@ -264,7 +264,7 @@ class Dashboard extends CI_Controller {
 			$data=[
 				'id_sumber'=> htmlspecialchars($this->input->post('a')),
 				'pagu'=> htmlspecialchars($this->input->post('b')),
-				'rkud'=> htmlspecialchars($this->input->post('a'))
+				'rkud'=> htmlspecialchars($this->input->post('c'))
 			];
 
 			$this->M_data->input_data('kas',$data);
