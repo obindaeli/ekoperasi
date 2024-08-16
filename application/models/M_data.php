@@ -36,14 +36,14 @@ class M_data extends CI_Model{
         public function viewanggaran()
         {
             $query=$this->db->query("SELECT A.id_opd, A.nama_opd, B.pad, C.dau, D.dak, E.silpa, F.dbhp, G.dif, H.bkp, I.dbhpv from opd A
-                                    left join(select id_opd, sum(jumlah) as pad from pagu where id_sumber = 1 group by id_sumber) B on A.id_opd = B.id_opd
-                                    left join(select id_opd, sum(jumlah) as dau from pagu where id_sumber = 2 group by id_sumber) C on A.id_opd = B.id_opd
-                                    left join(select id_opd, sum(jumlah) as dak from pagu where id_sumber = 3 group by id_sumber) D on A.id_opd = B.id_opd
-                                    left join(select id_opd, sum(jumlah) as silpa from pagu where id_sumber = 4 group by id_sumber) E on A.id_opd = B.id_opd
-                                    left join(select id_opd, sum(jumlah) as dbhp from pagu where id_sumber = 5 group by id_sumber) F on A.id_opd = B.id_opd
-                                    left join(select id_opd, sum(jumlah) as dif from pagu where id_sumber = 6 group by id_sumber) G on A.id_opd = B.id_opd
-                                    left join(select id_opd, sum(jumlah) as bkp from pagu where id_sumber = 7 group by id_sumber) H on A.id_opd = B.id_opd
-                                    left join(select id_opd, sum(jumlah) as dbhpv from pagu where id_sumber = 8 group by id_sumber) I on A.id_opd = B.id_opd;
+                                    left join(select id_opd, jumlah as pad from pagu where id_sumber = 1 ) B on A.id_opd = B.id_opd
+                                    left join(select id_opd, jumlah as dau from pagu where id_sumber = 2 ) C on A.id_opd = B.id_opd
+                                    left join(select id_opd, jumlah as dak from pagu where id_sumber = 3 ) D on A.id_opd = B.id_opd
+                                    left join(select id_opd, sum(jumlah) as silpa from pagu where id_sumber = 4 ) E on A.id_opd = B.id_opd
+                                    left join(select id_opd, sum(jumlah) as dbhp from pagu where id_sumber = 5 ) F on A.id_opd = B.id_opd
+                                    left join(select id_opd, sum(jumlah) as dif from pagu where id_sumber = 6 ) G on A.id_opd = B.id_opd
+                                    left join(select id_opd, sum(jumlah) as bkp from pagu where id_sumber = 7 ) H on A.id_opd = B.id_opd
+                                    left join(select id_opd, sum(jumlah) as dbhpv from pagu where id_sumber = 8 ) I on A.id_opd = B.id_opd;
                                 ");
             return $query->result();
         }
@@ -91,6 +91,11 @@ class M_data extends CI_Model{
 
         public function cekdata($where,$table){
             return $this->db->get_where($table,$where);
+        }
+
+        public function cekrkud($id){
+            
+             return $query->result();
         }
 
     }

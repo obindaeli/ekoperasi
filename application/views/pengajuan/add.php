@@ -16,7 +16,8 @@
                        
                     </div>
                     <div class="card-body">
-                        <form action="<?= base_url('Anggaran/tambahanggaran'); ?>" method="POST">
+                    <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
+                        <form action="<?= base_url('Anggaran/addpengajuan'); ?>" method="POST">
                             <div class="form-group col-8">
                                 <label>Nama OPD</label>
                                 <select name="a" id="" class="form-control" required>

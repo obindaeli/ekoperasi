@@ -35,7 +35,7 @@
           <div class="col-12 col-sm-8 offset-sm-4 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
             <div class="login-brand">
              <span>
-                <h2>SIMPANG BSD NIAS BARAT</h2>
+                <h2>SIMPANG <span style="color:red;">BSD</span></h2>
              </span>
             </div>
 

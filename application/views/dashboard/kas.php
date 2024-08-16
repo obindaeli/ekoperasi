@@ -41,7 +41,15 @@
                                               <td>$no</td>
                                               <td>$row->nama_sumber</td>
                                               <td>".rupiah($row->pagu)."</td>
-                                              <td>".rupiah($row->rkud)."</td>
+                                              <td>".rupiah($row->rkud)."
+                                                      <a 
+                                                      href='javascript:;'
+                                                      data-id=".$row->id_kas."
+                                                      data-rkud=".$row->rkud."
+                                                      data-toggle='modal' data-target='#edit-data'>
+                                                      <button  data-toggle='modal' data-target='#ubah-data' class='btn'> <i class='fas fa-edit'></i></button>
+                                                  </a>
+                                              </td>
                                               <td>".rupiah($row->sisa)."</td>
                                               <td>".rupiah($row->realisasi)."</td>
                                               <td class='text-center'>
@@ -64,4 +72,25 @@
             </div>
           </div>
         </section>
+        <!-- Modal Ubah -->
+          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="edit-data" class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <form class="form-horizontal" action="<?= base_url('dashboard/updaterkud'); ?>" method="post" enctype="multipart/form-data" role="form">
+                        <div class="modal-body">
+                            <div class="form-group col-12">
+                              <input type="hidden" id="id" class="form-control" name="a" placeholder="ID">
+                                <label>RKUD</label>
+                                <input type="number"  id="rkud" class="form-control nilai" name="b" autocomplete="off">
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-info" type="submit"> Simpan&nbsp;</button>
+                                <button type="button" class="btn btn-warning" data-dismiss="modal"> Batal</button>
+                            </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- END Modal Ubah -->
       </div>

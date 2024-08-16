@@ -1,7 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?=base_url()?>">SIMPANG BSD</a>
+            <a href="<?=base_url()?>">SIMPANG <span style="color:red;">BSD</span></a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="<?=base_url()?>">SM</a>
@@ -21,7 +21,7 @@
                 <li><a class="nav-link" href="<?=base_url('dashboard/opd')?>">Perangkat Daerah</a></li>
                 <li><a class="nav-link" href="<?=base_url('dashboard/sumber')?>">Sumber Anggaran</a></li>
                 <li><a class="nav-link" href="<?=base_url('dashboard/kas')?>">Kas Daerah</a></li>
-                <li><a class="nav-link" href="<?=base_url('anggaran')?>">Anggaran</a></li>
+                <li><a class="nav-link" href="<?=base_url('anggaran')?>">Pagu Indikatif</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -34,7 +34,7 @@
             <li class="dropdown">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-file-alt"></i></i> <span>Master Report</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="<?=base_url('penyerapan')?>">Penyerapan</a></li>
+                <li><a class="nav-link" href="<?=base_url('penyerapan')?>">Report Pengajuan</a></li>
               </ul>
               <li class="dropdown">
               <a href="#" class="nav-link has-dropdown"><i class="fa fa-cogs"></i></i> <span>System</span></a>

@@ -5,7 +5,7 @@
             <h1>Anggaran</h1>
             <div class="section-header-breadcrumb">
               <div class="breadcrumb-item active"><a href="<?=base_url('dashboard')?>">Dashboard</a></div>
-              <div class="breadcrumb-item">Anggaran</div>
+              <div class="breadcrumb-item">Pagu Indikatif</div>
             </div>
           </div>
 				<div class="row">
@@ -13,7 +13,8 @@
                 <div class="card">
                     <div class="card-header">
                         <span>
-                            <a href="<?=base_url('anggaran/tambahanggaran')?>" class="btn btn-success">Tambah</a>
+                            <a href="<?=base_url('Anggaran/tambahanggaran')?>" class="btn btn-success">Tambah</a>
+                            <a href="<?=base_url('Report/anggaran_all')?>" class="btn btn-info">Cetak</a>
                         </span>
                     </div>
                     <div class="card-body">

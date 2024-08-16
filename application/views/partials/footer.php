@@ -42,7 +42,20 @@
         })
     </script>
 
-  <script>
+    <script>
+    $(document).ready(function(){
+            $('#edit-data').on('show.bs.modal', function (event) {
+                var div = $(event.relatedTarget) // Tombol dimana modal di tampilkan
+                var modal          = $(this)
+
+                // Isi nilai pada field
+                modal.find('#id').attr("value",div.data('id'));
+                modal.find('#rkud').attr("value",div.data('rkud'));
+            });
+        });
+    </script>
+
+    <script>
        
 
         const flashData = $('.flash-data').data('flashdata');

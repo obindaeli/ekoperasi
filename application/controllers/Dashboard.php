@@ -273,4 +273,19 @@ class Dashboard extends CI_Controller {
 		}
 	}
 
+	public function updaterkud(){
+		$id=$this->input->post('a');
+		$rkud=$this->input->post('b');
+		
+		$data=[
+			'rkud'=> $rkud,
+			
+		];
+			
+		$where=array('id_kas' =>$id);
+		$this->M_data->update_data($where,$data,'kas');
+		$this->session->set_flashdata('flash', 'success-DATA BERHASIL DIUBAH');
+		redirect('Dashboard/kas');
+	}
+
 }

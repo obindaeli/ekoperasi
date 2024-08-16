@@ -10,15 +10,19 @@
               ?>
             </h1>
             <div class="section-header-breadcrumb">
-              <div class="breadcrumb-item active"><a href="<?=base_url('penyerapan')?>">Anggaran</a></div>
+              <div class="breadcrumb-item active"><a href="<?=base_url('Anggaran')?>">Anggaran</a></div>
               <div class="breadcrumb-item">Detail</div>
             </div>
           </div>
 				<div class="row">
 					<div class="col-lg-12">
                 <div class="card">
+                  <?php
+                      $id=$this->uri->segment(3);
+                  ?>
                     <div class="card-header">
                         <h4>Detail Anggaran</h4>
+                        <a href="<?= base_url('Report/anggaran_opd/');?><?= $id; ?>" class="btn btn-info">Cetak</a>
                     </div>
                     <div class="card-body">
                     <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
